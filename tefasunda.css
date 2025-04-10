@@ -1,4 +1,4 @@
-/* Reset dasar */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,149 +6,123 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-/* Navbar */
+/* Header Styles */
+header {
+    background: #156148;
+    color: #fff;
+    padding: 15px 0;
+}
+
 nav {
-    background-color: black;
-    color: white;
-    padding: 35px 20px;
-    font-size: 15px;
     display: flex;
-    align-items: center;
-    font-size: 25px;
 }
 
 .nav-kiri a {
-    color: white;
+    color: #fff;
     text-decoration: none;
-    font-weight: bold;
+    font-size: 24px;
+    margin-left: 20px;
 }
 
-/* Jumbotron */
+/* Jumbotron Styles */
 .jumbotron {
     position: relative;
-    width: 100%;
-    height: 400px; /* Sesuaikan tinggi gambar */
-    display: flex;
-    background-color: rgba(0, 0, 0, 0.379);
-    align-items: center; /* Posisi vertikal di tengah */
-}
-
-.bg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.title {
-    position: absolute;
-    left: 25%; /* Geser teks ke kiri */
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 36px;
-    color: white;
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 8px;
-}
-
-/* Responsiveness */
-@media (max-width: 768px) {
-    .title {
-        font-size: 24px;
-        left: 5%;
-        padding: 8px 15px;
-    }
-}   
-
-.bg {
-    width: 100%;
-    z-index: -1;
-}
-
-.hello{
-    transform: translateY(10rem);
-    font-size: 75px;
-}
-.bawah{
-    transform: translateY(10rem);
-    }
-
-
-    
-    .profile header {
-        text-align: center;
-    }
-
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8;
     text-align: center;
-    
+    color: white;
 }
+
+.jumbotron .bg {
+    width: 100%;
+    height: auto;
+    opacity: 0.8;
+}
+
+.jumbotron .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Container Styles */
 .container {
-    width: 80%;
-    margin: auto;
-    background: white;
+    max-width: 1200px;
+    margin: 20px auto;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-h1 {
-    font-size: 32px;
-    margin-bottom: 15px;
-}
+
+/* Section Styles */
 .section {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 20px 0;
-    padding: 10px 0;
-    text-align: justify;
-}
-.section:nth-child(even) {
-    flex-direction: row-reverse;
-}
-.section img {
-    width: 50%;
-    max-width: 550px;
-    height: auto;
-    border-radius: 8px;
-}
-.section .text {
-    width: 45%;
-    margin: 0 15px;
-}
-.section h2 {
-    font-size: 20px;
-    margin-bottom: 8px;
-}
-.section p {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;
-    margin: 0;
+    margin-bottom: 20px;
 }
 
+.sejarah {
+    border-radius: 8px;
+    width: 50%;
+    margin-left: 17em;
+}
+.section img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.text {
+    flex: 1;
+}
+
+.text h2 {
+    color: #268968;
+    margin-bottom: 10px;
+}
+
+.text p {
+    margin-bottom: 10px;
+}
+
+.text ul {
+    margin-left: 20px;
+}
+/* Footer Styles */
 .footer-bawah {
-    display: flex;
-    justify-content: center;
-    color: white;
+    background: #268968;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
     bottom: 0;
     width: 100%;
-    margin-top: 20px;
-    background-color: rgb(11, 21, 42);
-  }
-  
-  .designer {
-    opacity: 0.7;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 400;
-    margin: 0px 5px;
-  }
+}
+
+.designer {
+    font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section img {
+        margin: 0 0 10px 0;
+    }
+
+    .jumbotron .title {
+        font-size: 24px;
+    }
+}
